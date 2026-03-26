@@ -60,6 +60,6 @@ try {
     echo json_encode(['success' => true, 'vote_count' => $count]);
 
 } catch (PDOException $e) {
-    error_log('[CitizenConnect] DB error in upvote_issue.php: ' . $e->getMessage());
+    error_log('[LiwuConnect] DB error in upvote_issue.php: ' . $e->getMessage());
     echo json_encode(['success' => false, 'error' => 'Database error']);
 }

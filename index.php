@@ -15,7 +15,7 @@ $toggleLang = $lang === 'en' ? 'ny' : 'en';
 
 // ── All UI strings ──
 $s = [
-    'page_title'        => ['en' => 'CitizenConnect — Report & Track Issues',                    'ny' => 'CitizenConnect — Longa & Tsatira Mavuto'],
+    'page_title'        => ['en' => 'LiwuConnect — Report & Track Issues',                    'ny' => 'LiwuConnect — Longa & Tsatira Mavuto'],
     'nav_dashboard'     => ['en' => 'Dashboard',                                                 'ny' => 'Tsamba Lalikulu'],
     'nav_toggle'        => ['en' => '🇲🇼 Chichewa',                                               'ny' => '🇬🇧 English'],
     's1_label'          => ['en' => 'Step 1 of 4',                                               'ny' => 'Gawo 1 mwa 4'],

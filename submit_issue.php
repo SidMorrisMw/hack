@@ -133,6 +133,6 @@ try {
 
 } catch (PDOException $e) {
     // Log the real error server-side; never expose raw SQL errors to clients
-    error_log('[CitizenConnect] DB error in submit_issue.php: ' . $e->getMessage());
+    error_log('[LiwuConnect] DB error in submit_issue.php: ' . $e->getMessage());
     respond(false, 'A database error occurred. Please try again later.');
 }

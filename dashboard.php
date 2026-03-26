@@ -48,7 +48,7 @@ if (
             'unsatisfied' => (int)$counts['unsatisfied_count'],
         ]);
     } catch (PDOException $e) {
-        error_log('[CitizenConnect] rating: ' . $e->getMessage());
+        error_log('[LiwuConnect] rating: ' . $e->getMessage());
         echo json_encode(['ok' => false, 'error' => 'db_error']);
     }
     exit;
@@ -67,7 +67,7 @@ $toggleLang = $lang === 'en' ? 'ny' : 'en';
 
 // ── All UI strings ──
 $s = [
-    'page_title'        => ['en' => 'Public Dashboard — CitizenConnect',                             'ny' => 'Tsamba Lalikulu — CitizenConnect'],
+    'page_title'        => ['en' => 'Public Dashboard — LiwuConnect',                             'ny' => 'Tsamba Lalikulu — LiwuConnect'],
     'nav_report'        => ['en' => 'Report Issue',                                                  'ny' => 'Fotokozani Vuto'],
     'nav_toggle'        => ['en' => '🇲🇼 Chichewa',                                                   'ny' => '🇬🇧 English'],
     'dash_title'        => ['en' => 'Public Issues Dashboard',                                       'ny' => 'Tsamba Lalikulu la Mavuto'],
@@ -180,7 +180,7 @@ try {
             $stats = ['total'=>(int)($row['total']??0),'submitted'=>(int)($row['submitted']??0),'in_progress'=>(int)($row['in_progress']??0),'resolved'=>(int)($row['resolved']??0)];
         }
     }
-} catch (PDOException $e) { error_log('[CitizenConnect] dashboard.php: '.$e->getMessage()); }
+} catch (PDOException $e) { error_log('[LiwuConnect] dashboard.php: '.$e->getMessage()); }
 
 function esc(string $s): string { return htmlspecialchars($s, ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8'); }
 
@@ -789,7 +789,7 @@ $toggleUrl = 'dashboard.php?' . http_build_query($toggleParams);
                 }
             } catch (e) {
                 // Silent fail — UI is already locked, localStorage records vote
-                console.warn('[CitizenConnect] rating sync failed:', e);
+                console.warn('[LiwuConnect] rating sync failed:', e);
             }
         }
 

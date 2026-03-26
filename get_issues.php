@@ -94,6 +94,6 @@ try {
     echo json_encode(array_values($issues));
 
 } catch (PDOException $e) {
-    error_log('[CitizenConnect] DB error in get_issues.php: ' . $e->getMessage());
+    error_log('[LiwuConnect] DB error in get_issues.php: ' . $e->getMessage());
     echo json_encode([]);
 }
